@@ -1,24 +1,25 @@
 import Foundation
 import SwiftUI
 
-class ContentViewModel:ObservableObject,sese{
-    @Published var models:[ConstThingClass] = []
+class ContentViewModel:ObservableObject,SaveDereatProtocol{
+    @Published var models:[ConstThingModel] = []
     
     let fileController = FileController()
     
+    
     init(){
         for ll in fileController.fileDataModel.constList{
-            models.append(ConstThingClass(name: ll.name, date: ll.date))
+            models.append(ConstThingModel(name: ll.name, startDate: ll.startDate))
         }
     }
     
     func add(name:String){
-        models.append(ConstThingClass(name: name, date: myDateFormat.string(from: Date())))
+        models.append(ConstThingModel(name: name, startDate: myDateFormat.string(from: Date())))
     }
-    
+
     func delete(ID:String){
         for i in 0...models.count-1{
-            if models[i].model.id == ID{
+            if models[i].id == ID{
                 models.remove(at: i)
                 return
             }
@@ -28,7 +29,7 @@ class ContentViewModel:ObservableObject,sese{
     func save(){
         var arr:[ConstThingModel] = []
         for dd in models{
-            arr.append(dd.model)
+            arr.append(dd)
         }
         
         //保存
@@ -37,15 +38,7 @@ class ContentViewModel:ObservableObject,sese{
     }
 }
 
-protocol sese{
+protocol SaveDereatProtocol{
     func delete(ID:String)
     func save()
-}
-
-class ConstThingClass:ObservableObject{
-    @Published var model:ConstThingModel
-    
-    init(name:String,date:String){
-        model = ConstThingModel(name: name, date: date)
-    }
 }

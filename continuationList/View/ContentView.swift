@@ -7,7 +7,7 @@ struct ContentView: View {
         ScrollView{
             VStack(spacing: 15){
                 ForEach(0..<viewModel.models.count, id: \.self) { index in
-                    NavigationLink(destination: SubView(model: $viewModel.models[index].model,delegate: viewModel), label: {AlbumView(model: $viewModel.models[index].model)}
+                    NavigationLink(destination: SubView(model: $viewModel.models[index], delegate: viewModel), label: {AlbumView(model: $viewModel.models[index])}
                     ).frame(height: 80)
                 }
             }

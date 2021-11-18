@@ -1,8 +1,5 @@
-//
-//  File.swift
-//  continuationList
-//
-//  Created by 入江健太 on 2021/11/14.
-//
-
 import Foundation
+struct FileDataModel:Codable{
+    //継続物の配列
+    var constList :[ConstThingModel] = [ConstThingModel(name: "筋トレ", startDate: "2021年10月11日")]
+}

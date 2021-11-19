@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SubView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    //コメントを追加しました。
     @Binding var model:ConstThingModel
     var delegate:SaveDereatProtocol?
     @ObservedObject var viewModel = SubViewModel()

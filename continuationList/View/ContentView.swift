@@ -13,10 +13,8 @@ struct ContentView: View {
             }
             .padding(.horizontal)
             .padding(.top,25)
-            
         }
         .frame(maxWidth: .infinity)
-        .navigationTitle(Text("継続リスト"))
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
         .overlay(
             
@@ -58,6 +56,7 @@ struct ContentView: View {
             ,alignment: .bottomTrailing
         )
         .onDisappear{viewModel.save()}
+        .navigationBarTitle(Text("Poom"), displayMode: .inline)
         .navigationBarItems(trailing:
                                 NavigationLink(destination: SettingView(), label:{Image(systemName: "gearshape")} ))
     }

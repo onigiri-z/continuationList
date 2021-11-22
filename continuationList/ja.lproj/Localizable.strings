@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  continuationList
+
+  Created by 入江健太 on 2021/11/22.
+  
+*/
+
+
+"日:LL" = "日";
+"削除:LL" = "削除";
+"削除しますか？:LL" = "削除しますか？";

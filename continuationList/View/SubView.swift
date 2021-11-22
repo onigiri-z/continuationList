@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SubView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    //コメントを追加しました。 ローカルのdev_branchで追加した。
     @Binding var model:ConstThingModel
     var delegate:SaveDereatProtocol?
     @ObservedObject var viewModel = SubViewModel()
@@ -11,7 +10,10 @@ struct SubView: View {
         ZStack{
             VStack(spacing:10){
                 HStack{
-                    Text(model.getPassedDays()+"日継続中")
+                    HStack(spacing:0){
+                        Text(model.getPassedDays())
+                        Text("日:LL")
+                    }
                     ZStack{
                         
                         Circle()
@@ -27,7 +29,7 @@ struct SubView: View {
                     }
                     .rotationEffect(.init(degrees: viewModel.startAnimation ? 360 : 0))
                 }
-               
+                
                 HStack{
                     Text(model.name)
                     Image(systemName: "pencil")
@@ -70,7 +72,7 @@ struct SubView: View {
                 }
                 Button(action: {
                     
-                    let alertView = UIAlertController(title: model.name+"を削除しますか？", message: nil, preferredStyle: .alert)
+                    let alertView = UIAlertController(title: NSLocalizedString("削除しますか？:LL", comment: "削除しますか？"), message: nil, preferredStyle: .alert)
                     
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     
@@ -88,7 +90,7 @@ struct SubView: View {
                     // Presentitng...
                     UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
                 }){
-                    Text("削除").foregroundColor(.red)
+                    Text("削除:LL").foregroundColor(.red)
                 }.padding()
                 Spacer().frame(height:120)
             }.frame(maxHeight: .infinity).font(.largeTitle).onDisappear{delegate?.save()}

@@ -20,12 +20,13 @@ struct SettingView: View {
                 }, label: {
                     Text("このアプリを共有する")
                 })
-                Text("v1.2")
+                Text("v"+version!)
             }
         }.listStyle(GroupedListStyle())
             .navigationTitle(Text("設定"))
         
     }
+    let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
     let productURL:URL = URL(string: "https://apps.apple.com/us/app/%E7%B6%99%E7%B6%9A%E3%83%AA%E3%82%B9%E3%83%88-%E5%B0%8F%E3%81%95%E3%81%AA%E9%81%94%E6%88%90%E6%84%9F%E3%82%92%E6%8F%90%E4%BE%9B%E3%81%97%E3%81%BE%E3%81%99/id1594371097")!
     
     func otoiawase(){

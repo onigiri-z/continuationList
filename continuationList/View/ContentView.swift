@@ -43,8 +43,8 @@ struct ContentView: View {
                 
                 // Presentitng...
                 UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
-          
-               
+                
+                
                 print(viewModel.models.count)
             }, label: {
                 Image(systemName: "plus")
@@ -58,6 +58,8 @@ struct ContentView: View {
             ,alignment: .bottomTrailing
         )
         .onDisappear{viewModel.save()}
+        .navigationBarItems(trailing:
+                                NavigationLink(destination: SettingView(), label:{Image(systemName: "gearshape")} ))
     }
     func scaleValue(mainFrame : CGFloat,minY : CGFloat)-> CGFloat{
         withAnimation(.easeOut){

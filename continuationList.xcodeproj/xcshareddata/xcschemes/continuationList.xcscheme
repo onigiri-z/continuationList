@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B87EE3F2740D58700A74A2D"
-               BuildableName = "&#x7d99;&#x7d9a;&#x30ea;&#x30b9;&#x30c8;.app"
+               BuildableName = "Poom.app"
                BlueprintName = "continuationList"
                ReferencedContainer = "container:continuationList.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B87EE3F2740D58700A74A2D"
-            BuildableName = "&#x7d99;&#x7d9a;&#x30ea;&#x30b9;&#x30c8;.app"
+            BuildableName = "Poom.app"
             BlueprintName = "continuationList"
             ReferencedContainer = "container:continuationList.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B87EE3F2740D58700A74A2D"
-            BuildableName = "&#x7d99;&#x7d9a;&#x30ea;&#x30b9;&#x30c8;.app"
+            BuildableName = "Poom.app"
             BlueprintName = "continuationList"
             ReferencedContainer = "container:continuationList.xcodeproj">
          </BuildableReference>

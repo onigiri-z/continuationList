@@ -101,7 +101,7 @@ struct SubView: View {
 }
 
 struct SubView_Previews: PreviewProvider {
-    @State static var date = ConstThingModel(name: "禁断", startDate: "2021年10月1日")
+    @State static var date = ConstThingModel(name: "禁断", startDate: "2021/10/1")
     static var previews: some View {
         SubView(model: $date)
     }
@@ -110,6 +110,6 @@ struct SubView_Previews: PreviewProvider {
 
 var myDateFormat: DateFormatter {
     let df = DateFormatter()
-    df.dateFormat = "yyyy年M月d日"
+    df.dateFormat = "yyyy/M/d"
     return df
 }

@@ -47,7 +47,7 @@
 		7B5B4C5A2740D81D00E0408F /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		7B6F689E274112B50079F9A7 /* SubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewModel.swift; sourceTree = "<group>"; };
 		7B6F68A027411AE50079F9A7 /* FileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
-		7B87EE402740D58700A74A2D /* 継続リスト.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "継続リスト.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B87EE402740D58700A74A2D /* Poom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B87EE432740D58700A74A2D /* continuationListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = continuationListApp.swift; sourceTree = "<group>"; };
 		7B87EE452740D58700A74A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B87EE472740D58800A74A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		7B87EE412740D58700A74A2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B87EE402740D58700A74A2D /* 継続リスト.app */,
+				7B87EE402740D58700A74A2D /* Poom.app */,
 				7B87EE502740D58800A74A2D /* continuationListTests.xctest */,
 				7B87EE5A2740D58800A74A2D /* continuationListUITests.xctest */,
 			);
@@ -189,7 +189,7 @@
 			);
 			name = continuationList;
 			productName = continuationList;
-			productReference = 7B87EE402740D58700A74A2D /* 継続リスト.app */;
+			productReference = 7B87EE402740D58700A74A2D /* Poom.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7B87EE4F2740D58800A74A2D /* continuationListTests */ = {
@@ -485,7 +485,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
-				PRODUCT_NAME = "継続リスト";
+				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,7 +514,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
-				PRODUCT_NAME = "継続リスト";
+				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

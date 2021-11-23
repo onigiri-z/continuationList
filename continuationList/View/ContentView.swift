@@ -1,20 +1,27 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    
     @ObservedObject var viewModel = ContentViewModel()
     @Environment(\.colorScheme) var scheme
     var body: some View {
-        ScrollView{
-            VStack(spacing: 15){
-                ForEach(0..<viewModel.models.count, id: \.self) { index in
-                    NavigationLink(destination: SubView(model: $viewModel.models[index], delegate: viewModel), label: {AlbumView(model: $viewModel.models[index])}
-                    ).frame(height: 80)
-                }
-            }
-            .padding(.horizontal)
-            .padding(.top,25)
+        List{
+            ForEach(0..<viewModel.models.count, id: \.self) { index in
+                NavigationLink(destination: SubView(model: $viewModel.models[index], delegate: viewModel), label: {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(viewModel.models[index].name)
+                            .fontWeight(.bold)
+                        Text(viewModel.models[index].getPassedDays()+" "+MyConst.日)
+                            .fontWeight(.light)
+                    }.font(.system(size: 20, weight: .black, design: .default))
+                     .padding(5)
+                    }
+                )
+            }.onMove(perform: rowReplace).onDelete(perform: delete)
         }
-        .frame(maxWidth: .infinity)
+        .toolbar {EditButton()}
+        .listStyle(InsetGroupedListStyle())
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
         .overlay(
             
@@ -60,16 +67,16 @@ struct ContentView: View {
         .navigationBarItems(trailing:
                                 NavigationLink(destination: SettingView(), label:{Image(systemName: "gearshape")} ))
     }
-    func scaleValue(mainFrame : CGFloat,minY : CGFloat)-> CGFloat{
-        withAnimation(.easeOut){
-            let scale = (minY - 25) / mainFrame
-            if scale > 1{
-                return 1
-            }
-            else{
-                return scale
-            }
-        }
+    
+    //行入れ替え処理
+    func rowReplace(_ from: IndexSet, _ to: Int) {
+        viewModel.models.move(fromOffsets: from, toOffset: to)
+        viewModel.save()
+    }
+    //削除処理
+    func delete(at offsets: IndexSet) {
+        viewModel.models.remove(atOffsets: offsets)
+        viewModel.save()
     }
 }
 

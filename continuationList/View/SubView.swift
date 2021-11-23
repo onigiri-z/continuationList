@@ -93,12 +93,12 @@ struct SubView: View {
                     Text(MyConst.削除).foregroundColor(.red)
                 }.padding()
                 Spacer().frame(height:120)
-            }.frame(maxHeight: .infinity).font(.largeTitle).onDisappear{delegate?.save()}
-        }.ignoresSafeArea()
+            }.frame(maxWidth:.infinity,maxHeight: .infinity).font(.largeTitle).onDisappear{delegate?.save()}
+        }
             .onAppear(perform: {
                 viewModel.animateView()
             })
-        
+            .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
     }
 }
 

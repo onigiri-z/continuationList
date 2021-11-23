@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SubView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    //コメントを追加しました。 ローカルのdev_branchで追加した。
     @Binding var model:ConstThingModel
     var delegate:SaveDereatProtocol?
     @ObservedObject var viewModel = SubViewModel()
@@ -11,7 +10,10 @@ struct SubView: View {
         ZStack{
             VStack(spacing:10){
                 HStack{
-                    Text(model.getPassedDays()+"日継続中")
+                    HStack(spacing:0){
+                        Text(model.getPassedDays())
+                        Text(MyConst.日)
+                    }
                     ZStack{
                         
                         Circle()
@@ -27,13 +29,13 @@ struct SubView: View {
                     }
                     .rotationEffect(.init(degrees: viewModel.startAnimation ? 360 : 0))
                 }
-               
+                
                 HStack{
                     Text(model.name)
                     Image(systemName: "pencil")
                 }.onTapGesture {
                     print("名前編集")
-                    let alertView = UIAlertController(title: "名前の変更", message: nil, preferredStyle: .alert)
+                    let alertView = UIAlertController(title: MyConst.名前の変更, message: nil, preferredStyle: .alert)
                     
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     
@@ -70,7 +72,7 @@ struct SubView: View {
                 }
                 Button(action: {
                     
-                    let alertView = UIAlertController(title: model.name+"を削除しますか？", message: nil, preferredStyle: .alert)
+                    let alertView = UIAlertController(title: MyConst.削除しますか？, message: nil, preferredStyle: .alert)
                     
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     
@@ -88,7 +90,7 @@ struct SubView: View {
                     // Presentitng...
                     UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
                 }){
-                    Text("削除").foregroundColor(.red)
+                    Text(MyConst.削除).foregroundColor(.red)
                 }.padding()
                 Spacer().frame(height:120)
             }.frame(maxHeight: .infinity).font(.largeTitle).onDisappear{delegate?.save()}
@@ -101,7 +103,7 @@ struct SubView: View {
 }
 
 struct SubView_Previews: PreviewProvider {
-    @State static var date = ConstThingModel(name: "禁断", startDate: "2021年10月1日")
+    @State static var date = ConstThingModel(name: "禁断", startDate: "2021/10/1")
     static var previews: some View {
         SubView(model: $date)
     }
@@ -110,6 +112,6 @@ struct SubView_Previews: PreviewProvider {
 
 var myDateFormat: DateFormatter {
     let df = DateFormatter()
-    df.dateFormat = "yyyy年M月d日"
+    df.dateFormat = "yyyy/M/d"
     return df
 }

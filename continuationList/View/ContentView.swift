@@ -13,16 +13,14 @@ struct ContentView: View {
             }
             .padding(.horizontal)
             .padding(.top,25)
-            
         }
         .frame(maxWidth: .infinity)
-        .navigationTitle(Text("継続リスト"))
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
         .overlay(
             
             // FAB Button...
             Button(action: {
-                let alertView = UIAlertController(title: "新規作成", message: nil, preferredStyle: .alert)
+                let alertView = UIAlertController(title: MyConst.新規作成, message: nil, preferredStyle: .alert)
                 
                 let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                 
@@ -35,7 +33,7 @@ struct ContentView: View {
                 }
                 
                 alertView.addTextField { (txt) in
-                    txt.placeholder = "名前"
+                    txt.placeholder = MyConst.名前
                 }
                 
                 alertView.addAction(cancel)
@@ -43,8 +41,8 @@ struct ContentView: View {
                 
                 // Presentitng...
                 UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
-          
-               
+                
+                
                 print(viewModel.models.count)
             }, label: {
                 Image(systemName: "plus")
@@ -58,6 +56,9 @@ struct ContentView: View {
             ,alignment: .bottomTrailing
         )
         .onDisappear{viewModel.save()}
+        .navigationBarTitle(Text("Poom"), displayMode: .inline)
+        .navigationBarItems(trailing:
+                                NavigationLink(destination: SettingView(), label:{Image(systemName: "gearshape")} ))
     }
     func scaleValue(mainFrame : CGFloat,minY : CGFloat)-> CGFloat{
         withAnimation(.easeOut){

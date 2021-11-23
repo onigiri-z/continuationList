@@ -12,7 +12,7 @@ struct AlbumView : View {
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                 
-                Text(model.getPassedDays()+" 日")
+                Text(model.getPassedDays()+" "+MyConst.日)
                     .fontWeight(.light)
                     .foregroundColor(.black)
             }
@@ -31,7 +31,7 @@ struct AlbumView : View {
 }
 
 struct AlbumView_Previews: PreviewProvider {
-    @State static var model = ConstThingModel(name: "サンプロ", startDate: "2021年10月5日")
+    @State static var model = ConstThingModel(name: "サンプロ", startDate: "2021/10/5")
     static var previews: some View {
         AlbumView(model: $model)
     }

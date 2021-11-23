@@ -7,7 +7,7 @@ class FileController {
 
     //データを保存するURL
     private var saveURL: URL {
-        return try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("save20211114")
+        return try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("save20211122")
     }
     //初期化
     init() {

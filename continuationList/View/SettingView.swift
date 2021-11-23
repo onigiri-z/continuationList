@@ -3,27 +3,27 @@ import SwiftUI
 struct SettingView: View {
     var body: some View {
         List {
-            Section(header: Text("サポート")) {
+            Section(header: Text(MyConst.サポート)) {
                 
                 Button(action: {
                     otoiawase()
                 }, label: {
-                    Text("お問い合わせ")
+                    Text(MyConst.お問い合わせ)
                 })
                 Button(action: {
                     reviewApp()
                 }, label: {
-                    Text("レビューする")
+                    Text(MyConst.レビューする)
                 })
                 Button(action: {
                     shareApp()
                 }, label: {
-                    Text("このアプリを共有する")
+                    Text(MyConst.このアプリを共有する)
                 })
                 Text("v"+version!)
             }
         }.listStyle(GroupedListStyle())
-            .navigationTitle(Text("設定"))
+            .navigationTitle(Text(MyConst.設定))
         
     }
     let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String

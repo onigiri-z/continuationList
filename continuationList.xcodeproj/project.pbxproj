@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B52D00C274C865A00787B8E /* constFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52D00B274C865A00787B8E /* constFile.swift */; };
 		7B5B2EB6274B7ACD00CC08BB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */; };
 		7B5B2EB9274B973800CC08BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B2EBB274B973800CC08BB /* Localizable.strings */; };
 		7B5B4C552740D79100E0408F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B4C542740D79100E0408F /* Model.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B52D00B274C865A00787B8E /* constFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constFile.swift; sourceTree = "<group>"; };
 		7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		7B5B2EBA274B973800CC08BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B5B2EBC274B973E00CC08BB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 		7B87EE422740D58700A74A2D /* continuationList */ = {
 			isa = PBXGroup;
 			children = (
+				7B52D00B274C865A00787B8E /* constFile.swift */,
+				7B5B2EBB274B973800CC08BB /* Localizable.strings */,
 				7B87EE6F2740D65500A74A2D /* Model */,
 				7B87EE6E2740D64E00A74A2D /* ViewModel */,
 				7B87EE6D2740D64700A74A2D /* View */,
@@ -120,7 +124,6 @@
 				7BC31EC72741100200F8C44C /* FileController.swift */,
 				7B87EE472740D58800A74A2D /* Assets.xcassets */,
 				7B87EE492740D58800A74A2D /* Preview Content */,
-				7B5B2EBB274B973800CC08BB /* Localizable.strings */,
 			);
 			path = continuationList;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				7B5B4C552740D79100E0408F /* Model.swift in Sources */,
 				7B87EE462740D58700A74A2D /* ContentView.swift in Sources */,
+				7B52D00C274C865A00787B8E /* constFile.swift in Sources */,
 				7B5B4C572740D7E800E0408F /* ContentViewModel.swift in Sources */,
 				7B6F689F274112B50079F9A7 /* SubViewModel.swift in Sources */,
 				7BC31EC82741100200F8C44C /* FileController.swift in Sources */,
@@ -491,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"continuationList/Preview Content\"";
 				DEVELOPMENT_TEAM = CU767L7FT4;
 				ENABLE_PREVIEWS = YES;
@@ -505,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -520,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"continuationList/Preview Content\"";
 				DEVELOPMENT_TEAM = CU767L7FT4;
 				ENABLE_PREVIEWS = YES;
@@ -534,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;

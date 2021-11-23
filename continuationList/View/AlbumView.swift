@@ -12,7 +12,7 @@ struct AlbumView : View {
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                 
-                Text(model.getPassedDays()+" 日")
+                Text(model.getPassedDays()+" "+MyConst.日)
                     .fontWeight(.light)
                     .foregroundColor(.black)
             }

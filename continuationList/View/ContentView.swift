@@ -20,7 +20,7 @@ struct ContentView: View {
             
             // FAB Button...
             Button(action: {
-                let alertView = UIAlertController(title: "新規作成", message: nil, preferredStyle: .alert)
+                let alertView = UIAlertController(title: MyConst.新規作成, message: nil, preferredStyle: .alert)
                 
                 let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                 
@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
                 
                 alertView.addTextField { (txt) in
-                    txt.placeholder = "名前"
+                    txt.placeholder = MyConst.名前
                 }
                 
                 alertView.addAction(cancel)

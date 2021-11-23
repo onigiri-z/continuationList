@@ -12,7 +12,7 @@ struct SubView: View {
                 HStack{
                     HStack(spacing:0){
                         Text(model.getPassedDays())
-                        Text("日:LL")
+                        Text(MyConst.日)
                     }
                     ZStack{
                         
@@ -35,7 +35,7 @@ struct SubView: View {
                     Image(systemName: "pencil")
                 }.onTapGesture {
                     print("名前編集")
-                    let alertView = UIAlertController(title: "名前の変更", message: nil, preferredStyle: .alert)
+                    let alertView = UIAlertController(title: MyConst.名前の変更, message: nil, preferredStyle: .alert)
                     
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     
@@ -72,7 +72,7 @@ struct SubView: View {
                 }
                 Button(action: {
                     
-                    let alertView = UIAlertController(title: NSLocalizedString("削除しますか？:LL", comment: "削除しますか？"), message: nil, preferredStyle: .alert)
+                    let alertView = UIAlertController(title: MyConst.削除しますか？, message: nil, preferredStyle: .alert)
                     
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     
@@ -90,7 +90,7 @@ struct SubView: View {
                     // Presentitng...
                     UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
                 }){
-                    Text("削除:LL").foregroundColor(.red)
+                    Text(MyConst.削除).foregroundColor(.red)
                 }.padding()
                 Spacer().frame(height:120)
             }.frame(maxHeight: .infinity).font(.largeTitle).onDisappear{delegate?.save()}

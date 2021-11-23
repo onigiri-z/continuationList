@@ -2,7 +2,7 @@ import Foundation
 
 //継続物モデル
 struct ConstThingModel:Codable{
-    //ID macmini
+    //ID macmini　ここを追加
     var id = UUID().uuidString
     //名前
     var name:String

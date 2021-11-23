@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B4DF369274CCC7800D26954 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B4DF36A274CCE8500D26954 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7B52D00B274C865A00787B8E /* constFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constFile.swift; sourceTree = "<group>"; };
 		7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		7B5B2EBA274B973800CC08BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -269,6 +271,8 @@
 				en,
 				Base,
 				ja,
+				ko,
+				"zh-Hans",
 			);
 			mainGroup = 7B87EE372740D58700A74A2D;
 			productRefGroup = 7B87EE412740D58700A74A2D /* Products */;
@@ -366,6 +370,8 @@
 			children = (
 				7B5B2EBA274B973800CC08BB /* en */,
 				7B5B2EBC274B973E00CC08BB /* ja */,
+				7B4DF369274CCC7800D26954 /* ko */,
+				7B4DF36A274CCE8500D26954 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

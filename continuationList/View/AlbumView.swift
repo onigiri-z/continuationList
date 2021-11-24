@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AlbumView : View {
-    @Environment(\.editMode) var editMode
+    @Environment(\.editMode) var envEditMode
     @EnvironmentObject var baseData: BaseViewModel
     @Binding var model:ConstThingModel
     
@@ -14,11 +14,13 @@ struct AlbumView : View {
                     Text(model.name)
                         .font(.title3)
                         .fontWeight(.bold)
-                    if editMode?.wrappedValue == .active{
+                    //                    if editMode?.wrappedValue == .active{
+                    if envEditMode?.wrappedValue.isEditing ?? false {
                         Image(systemName: "pencil")
                     }
                 }.onTapGesture{
-                    if editMode?.wrappedValue == .active{
+                    //if editMode?.wrappedValue == .active{
+                    if envEditMode?.wrappedValue.isEditing ?? false {
                         print("名前編集")
                         baseData.editNameIndex = index
                         withAnimation{
@@ -27,7 +29,8 @@ struct AlbumView : View {
                     }
                 }
                 
-                if editMode?.wrappedValue == .active{
+                // if editMode?.wrappedValue == .active{
+                if envEditMode?.wrappedValue.isEditing ?? false {
                     HStack{
                         Text(model.startDate)
                         DatePicker(
@@ -43,7 +46,8 @@ struct AlbumView : View {
                         
                     }
                 }
-                if editMode?.wrappedValue == .inactive{
+                // if editMode?.wrappedValue == .inactive{
+                if envEditMode?.wrappedValue.isEditing ?? false {}else{
                     Text(model.getPassedDays()+" "+MyConst.日)
                         .font(.title3)
                         .fontWeight(.light)

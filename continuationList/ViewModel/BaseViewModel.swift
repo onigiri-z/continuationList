@@ -1,7 +1,10 @@
 import Foundation
 import SwiftUI
 
+
+
 class BaseViewModel:ObservableObject{
+    
     @Published var models:[ConstThingModel] = []
     // Tab Bar...
     @Published var currentTab: Tab = .Home
@@ -9,8 +12,13 @@ class BaseViewModel:ObservableObject{
     @Published var customAlert = false
     //アラート２
     @Published var createNew = false
-    @Published var editNameIndex = 0
-    
+    @Published var editNameIndex:Int?{
+        didSet{
+            currentModeledit = models[editNameIndex!]
+        }
+    }
+    var currentModeledit:ConstThingModel?
+
     let fileController = FileController()
     
     init(){
@@ -31,6 +39,17 @@ class BaseViewModel:ObservableObject{
     
     func add(name:String){
         models.append(ConstThingModel(name: name, startDate: myDateFormat.string(from: Date())))
+        self.save()
+    }
+    
+    //行入れ替え処理
+    func rowReplace(_ from: IndexSet, _ to: Int) {
+        self.models.move(fromOffsets: from, toOffset: to)
+        self.save()
+    }
+    //削除処理
+    func delete(at offsets: IndexSet) {
+        self.models.remove(atOffsets: offsets)
         self.save()
     }
     

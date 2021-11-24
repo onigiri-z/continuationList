@@ -1,11 +1,17 @@
 import Foundation
 import SwiftUI
 
-class ContentViewModel:ObservableObject,SaveDereatProtocol{
+class BaseViewModel:ObservableObject{
     @Published var models:[ConstThingModel] = []
+    // Tab Bar...
+    @Published var currentTab: Tab = .Home
+    //アラート１
+    @Published var customAlert = false
+    //アラート２
+    @Published var createNew = false
+    @Published var editNameIndex = 0
     
     let fileController = FileController()
-    
     
     init(){
         for ll in fileController.fileDataModel.constList{
@@ -13,17 +19,19 @@ class ContentViewModel:ObservableObject,SaveDereatProtocol{
         }
     }
     
+    func editName(index:Int,value:String){
+        models[index].name = value
+        self.save()
+    }
+    
+    func editDate(index:Int,value:Date){
+        models[index].startDate = myDateFormat.string(from: value)
+        self.save()
+    }
+    
     func add(name:String){
         models.append(ConstThingModel(name: name, startDate: myDateFormat.string(from: Date())))
-    }
-
-    func delete(ID:String){
-        for i in 0...models.count-1{
-            if models[i].id == ID{
-                models.remove(at: i)
-                return
-            }
-        }
+        self.save()
     }
     
     func save(){
@@ -31,14 +39,16 @@ class ContentViewModel:ObservableObject,SaveDereatProtocol{
         for dd in models{
             arr.append(dd)
         }
-        
         //保存
         fileController.setfiledata(arr: arr)
         fileController.saveDataModel()
+        
+        print("保存しました。")
     }
 }
 
-protocol SaveDereatProtocol{
-    func delete(ID:String)
-    func save()
+// Enum Case for Tab Items...
+enum Tab: String{
+    case Home = "house"
+    case Setting = "gearshape"
 }

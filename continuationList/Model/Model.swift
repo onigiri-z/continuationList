@@ -16,3 +16,10 @@ struct ConstThingModel:Codable{
         return "\(elapsedDays)"
     }
 }
+
+
+var myDateFormat: DateFormatter {
+    let df = DateFormatter()
+    df.dateFormat = "yyyy/M/d"
+    return df
+}

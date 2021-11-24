@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2DB9FE274E4247007F7F91 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB9FD274E4247007F7F91 /* CreateNewView.swift */; };
+		7B2DBA00274E8B6D007F7F91 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */; };
 		7B52D00C274C865A00787B8E /* constFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52D00B274C865A00787B8E /* constFile.swift */; };
 		7B5B2EB6274B7ACD00CC08BB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */; };
 		7B5B2EB9274B973800CC08BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B2EBB274B973800CC08BB /* Localizable.strings */; };
@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B2DB9FD274E4247007F7F91 /* CreateNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
+		7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
 		7B4DF369274CCC7800D26954 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B4DF36A274CCE8500D26954 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7B52D00B274C865A00787B8E /* constFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constFile.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */,
 				7BA46B73274E03A9002FF8E1 /* CustomCurveShape.swift */,
 				7B9B3439274E3C73008C5D7A /* CustomAlertView.swift */,
-				7B2DB9FD274E4247007F7F91 /* CreateNewView.swift */,
+				7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5B4C552740D79100E0408F /* Model.swift in Sources */,
-				7B2DB9FE274E4247007F7F91 /* CreateNewView.swift in Sources */,
+				7B2DBA00274E8B6D007F7F91 /* CreateNewView.swift in Sources */,
 				7B9B343A274E3C74008C5D7A /* CustomAlertView.swift in Sources */,
 				7BA46B76274E13B6002FF8E1 /* BaseView.swift in Sources */,
 				7B87EE462740D58700A74A2D /* ContentView.swift in Sources */,

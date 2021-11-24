@@ -1,25 +1,25 @@
 import SwiftUI
 
-struct CustomAlertView:View{
+struct CreateNewView:View{
     
     @State private var inputText = ""
     @EnvironmentObject var baseData: BaseViewModel
     @FocusState var isFieldFocused: Bool
     
     var body: some View{
-        if baseData.customAlert{
+        if baseData.createNew{
             ZStack{
                 Color.brown.opacity(0.3).ignoresSafeArea()
                 VStack{
-                    Text(MyConst.名前の変更)
-                    TextField(baseData.currentModeledit!.name,text:$inputText)
+                    Text(MyConst.新規作成)
+                    TextField(MyConst.名前,text:$inputText)
                         .background(Color.white).frame(width:200)
                         .focused($isFieldFocused, equals: true)
                     Divider()
                     HStack{
                         Button(action:{
                             withAnimation{
-                                baseData.customAlert.toggle()
+                                baseData.createNew.toggle()
                             }
                         }){
                             Spacer()
@@ -27,9 +27,9 @@ struct CustomAlertView:View{
                             Spacer()
                         }
                         Button(action:{
-                            baseData.editName(index: baseData.editNameIndex!, value: inputText)
+                            baseData.add(name: inputText)
                             withAnimation{
-                                baseData.customAlert.toggle()
+                                baseData.createNew.toggle()
                             }
                         }){
                             Spacer()
@@ -51,11 +51,13 @@ struct CustomAlertView:View{
 }
 
 
-struct CustomAlertView_Previews: PreviewProvider {
+
+
+struct CreateNewView_Previews: PreviewProvider {
     @State static var bool = true
     @State static var index = 0
     @StateObject static var baseData2 = BaseViewModel()
     static var previews: some View {
-        CustomAlertView().environmentObject(baseData2)
+        CreateNewView().environmentObject(baseData2)
     }
 }

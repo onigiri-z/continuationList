@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import continuationList
+@testable import Poom
 
 class continuationListTests: XCTestCase {
 

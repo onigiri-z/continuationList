@@ -1,29 +1,46 @@
 import SwiftUI
 
 struct SettingView: View {
+    // Hiding Tab bar...
+    init(){
+        UITabBar.appearance().isHidden = true
+        //List全体の背景色の設定
+        UITableView.appearance().backgroundColor = UIColor.clear
+    }
+    
     var body: some View {
-        List {
-            Section(header: Text(MyConst.サポート)) {
-                
-                Button(action: {
-                    otoiawase()
-                }, label: {
-                    Text(MyConst.お問い合わせ)
-                })
-                Button(action: {
-                    reviewApp()
-                }, label: {
-                    Text(MyConst.レビューする)
-                })
-                Button(action: {
-                    shareApp()
-                }, label: {
-                    Text(MyConst.このアプリを共有する)
-                })
-                Text("v"+version!)
+        
+        VStack{
+            HStack{
+                Spacer()
             }
-        }.listStyle(GroupedListStyle())
-            .navigationTitle(Text(MyConst.設定))
+            .overlay(Text(MyConst.設定).font(.title3).fontWeight(.bold))
+            //.foregroundColor(.black)
+            .frame(height:40)
+            
+            List {
+                Section(header: Text(MyConst.サポート)) {
+                    
+                    Button(action: {
+                        otoiawase()
+                    }, label: {
+                        Text(MyConst.お問い合わせ)
+                    })
+                    Button(action: {
+                        reviewApp()
+                    }, label: {
+                        Text(MyConst.レビューする)
+                    })
+                    Button(action: {
+                        shareApp()
+                    }, label: {
+                        Text(MyConst.このアプリを共有する)
+                    })
+                    Text("v"+version!)
+                }
+            }.listStyle(GroupedListStyle())
+        }.padding()
+        
         
     }
     let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String

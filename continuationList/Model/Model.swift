@@ -2,7 +2,7 @@ import Foundation
 
 //継続物モデル
 struct ConstThingModel:Codable{
-    //ID macmini
+    //ID macmini　ここを追加
     var id = UUID().uuidString
     //名前
     var name:String
@@ -15,4 +15,11 @@ struct ConstThingModel:Codable{
         let elapsedDays = Calendar.current.dateComponents([.day], from: date1!, to: date2).day!
         return "\(elapsedDays)"
     }
+}
+
+
+var myDateFormat: DateFormatter {
+    let df = DateFormatter()
+    df.dateFormat = "yyyy/M/d"
+    return df
 }

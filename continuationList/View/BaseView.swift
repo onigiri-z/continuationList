@@ -23,7 +23,7 @@ struct BaseView: View {
         }
         .overlay(
             //カスタムタブバー
-            HStack(alignment: .bottom, spacing: 0){
+            HStack(spacing: 0){
                 TabButton(Tab: .Home)
                 Button {
                     withAnimation{

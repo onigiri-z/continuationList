@@ -527,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -556,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;

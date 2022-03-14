@@ -19,6 +19,7 @@ struct Home: View {
                 }.onMove(perform: baseData.rowReplace)
                     .onDelete(perform: baseData.delete)
             }.listStyle(GroupedListStyle())
+            
         }
         .padding()
         .frame(maxWidth:.infinity,maxHeight: .infinity)

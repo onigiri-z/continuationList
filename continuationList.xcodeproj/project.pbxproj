@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5992D03E304DB2D4685BDF0A /* libPods-continuationList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 262058F0A5693FFB6A91E89F /* libPods-continuationList.a */; };
+		7B15FABD27DF92B000F302FA /* AdmobBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15FABC27DF92B000F302FA /* AdmobBannerView.swift */; };
+		7B15FAC127DF943200F302FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B15FAC027DF943200F302FA /* GoogleService-Info.plist */; };
 		7B2DBA00274E8B6D007F7F91 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */; };
 		7B52D00C274C865A00787B8E /* constFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52D00B274C865A00787B8E /* constFile.swift */; };
 		7B5B2EB6274B7ACD00CC08BB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B2EB5274B7ACD00CC08BB /* SettingView.swift */; };
@@ -47,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		262058F0A5693FFB6A91E89F /* libPods-continuationList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-continuationList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB1EAB945636F7B39A43766 /* Pods-continuationList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-continuationList.release.xcconfig"; path = "Target Support Files/Pods-continuationList/Pods-continuationList.release.xcconfig"; sourceTree = "<group>"; };
+		7B15FABC27DF92B000F302FA /* AdmobBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobBannerView.swift; sourceTree = "<group>"; };
+		7B15FAC027DF943200F302FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
 		7B4DF369274CCC7800D26954 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B4DF36A274CCE8500D26954 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		7B5B4C562740D7E800E0408F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		7B5B4C582740D80E00E0408F /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		7B6F68A027411AE50079F9A7 /* FileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
+		7B7B38ED27DF887800679379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7B87EE402740D58700A74A2D /* Poom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B87EE432740D58700A74A2D /* continuationListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = continuationListApp.swift; sourceTree = "<group>"; };
 		7B87EE452740D58700A74A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 		7BA46B75274E13B6002FF8E1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		7BA46B77274E1515002FF8E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7BC31EC72741100200F8C44C /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
+		8E2C331362CA365BBECD2AAE /* Pods-continuationList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-continuationList.debug.xcconfig"; path = "Target Support Files/Pods-continuationList/Pods-continuationList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5992D03E304DB2D4685BDF0A /* libPods-continuationList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,13 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B917422201D8676395645DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E2C331362CA365BBECD2AAE /* Pods-continuationList.debug.xcconfig */,
+				3CB1EAB945636F7B39A43766 /* Pods-continuationList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7B87EE372740D58700A74A2D = {
 			isa = PBXGroup;
 			children = (
+				7B15FAC027DF943200F302FA /* GoogleService-Info.plist */,
 				7B87EE422740D58700A74A2D /* continuationList */,
 				7B87EE532740D58800A74A2D /* continuationListTests */,
 				7B87EE5D2740D58800A74A2D /* continuationListUITests */,
 				7B87EE412740D58700A74A2D /* Products */,
+				3B917422201D8676395645DB /* Pods */,
+				FB718FBC23BFF13E30E6E919 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +145,7 @@
 		7B87EE422740D58700A74A2D /* continuationList */ = {
 			isa = PBXGroup;
 			children = (
+				7B7B38ED27DF887800679379 /* Info.plist */,
 				7B52D00B274C865A00787B8E /* constFile.swift */,
 				7B5B2EBB274B973800CC08BB /* Localizable.strings */,
 				7B87EE6F2740D65500A74A2D /* Model */,
@@ -172,6 +195,7 @@
 				7BA46B73274E03A9002FF8E1 /* CustomCurveShape.swift */,
 				7B9B3439274E3C73008C5D7A /* CustomAlertView.swift */,
 				7B2DB9FF274E8B6D007F7F91 /* CreateNewView.swift */,
+				7B15FABC27DF92B000F302FA /* AdmobBannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +217,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FB718FBC23BFF13E30E6E919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				262058F0A5693FFB6A91E89F /* libPods-continuationList.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B87EE642740D58800A74A2D /* Build configuration list for PBXNativeTarget "continuationList" */;
 			buildPhases = (
+				C6239FE8EF06B250D5E3ADE8 /* [CP] Check Pods Manifest.lock */,
 				7B87EE3C2740D58700A74A2D /* Sources */,
 				7B87EE3D2740D58700A74A2D /* Frameworks */,
 				7B87EE3E2740D58700A74A2D /* Resources */,
@@ -301,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B87EE4B2740D58800A74A2D /* Preview Assets.xcassets in Resources */,
+				7B15FAC127DF943200F302FA /* GoogleService-Info.plist in Resources */,
 				7B5B2EB9274B973800CC08BB /* Localizable.strings in Resources */,
 				7B87EE482740D58800A74A2D /* Assets.xcassets in Resources */,
 			);
@@ -322,6 +356,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C6239FE8EF06B250D5E3ADE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-continuationList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B87EE3C2740D58700A74A2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -332,6 +391,7 @@
 				7B9B343A274E3C74008C5D7A /* CustomAlertView.swift in Sources */,
 				7BA46B76274E13B6002FF8E1 /* BaseView.swift in Sources */,
 				7B87EE462740D58700A74A2D /* ContentView.swift in Sources */,
+				7B15FABD27DF92B000F302FA /* AdmobBannerView.swift in Sources */,
 				7B52D00C274C865A00787B8E /* constFile.swift in Sources */,
 				7B5B4C572740D7E800E0408F /* BaseViewModel.swift in Sources */,
 				7BA46B78274E1515002FF8E1 /* Home.swift in Sources */,
@@ -509,6 +569,7 @@
 		};
 		7B87EE652740D58800A74A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2C331362CA365BBECD2AAE /* Pods-continuationList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +579,7 @@
 				DEVELOPMENT_TEAM = CU767L7FT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = continuationList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -527,7 +589,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -538,6 +600,7 @@
 		};
 		7B87EE662740D58800A74A2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB1EAB945636F7B39A43766 /* Pods-continuationList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,6 +610,7 @@
 				DEVELOPMENT_TEAM = CU767L7FT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = continuationList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -556,7 +620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.continuationList;
 				PRODUCT_NAME = Poom;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -11,9 +11,9 @@ struct CreateNewView:View{
             ZStack{
                 Color.brown.opacity(0.3).ignoresSafeArea()
                 VStack{
-                    Text(MyConst.新規作成)
+                    Text(MyConst.新規作成).foregroundColor(.black)
                     TextField(MyConst.名前,text:$inputText)
-                        .background(Color.white).frame(width:200)
+                        .background(Color.white).foregroundColor(.black).frame(width:200)
                         .focused($isFieldFocused, equals: true)
                     Divider()
                     HStack{

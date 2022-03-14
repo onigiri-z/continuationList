@@ -59,8 +59,26 @@ struct SettingView: View {
             activityItems: [productURL],
             applicationActivities: nil)
         
-        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+       
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let window = windowScene?.windows.first
         
+        if UIDevice.current.userInterfaceIdiom == .phone {
+           // 使用デバイスがiPhoneの場合
+            window!.rootViewController?.present(activityViewController, animated: true, completion: nil)
+
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+           // 使用デバイスがiPadの場合
+            window!.rootViewController?.present(activityViewController, animated: true, completion: nil)
+            
+            activityViewController.popoverPresentationController!.sourceView = window
+            activityViewController.popoverPresentationController!.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2.1,
+                                                                                     y:  UIScreen.main.bounds.height / 2.3,
+                                                                                     width: 200,
+                                                                                     height: 200)
+        }
+       
     }
     
     func reviewApp(){
